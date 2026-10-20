@@ -1,0 +1,103 @@
+.spartak {
+  --ink: #271d20;
+  --brand-green: #c8102e;
+  --yellow: #fff;
+  --red: #c8102e;
+  --accent: #c8102e;
+  --accent-hover: #a10d25;
+  --line: #e3dadd;
+  --paper: #fff;
+  --muted: #685c60;
+}
+.spartak body { background: var(--paper); }
+.spartak .section { padding-block: 72px; }
+.spartak .header { border-top: 5px solid var(--accent); }
+.spartak .brand-crest { border-radius: 0; }
+.spartak .brand-wordmark { font-size: 21px; letter-spacing: -.02em; }
+.spartak .brand-second { font-size: 11px; letter-spacing: .2em; margin-top: 5px; }
+.spartak .brand-caption { font-size: 6px !important; }
+.spartak .hero { grid-template-columns: .92fr 1.08fr; border-radius: 4px; }
+.spartak .hero-copy { padding: 44px 36px; position: relative; }
+.spartak .hero-copy::after { content: ''; position: absolute; width: 68px; height: 3px; background: white; right: 0; top: 60px; }
+.spartak .hero .eyebrow { color: white; margin-bottom: 24px; font-size: 11px; }
+.spartak h1 { font-size: clamp(44px, 5.3vw, 76px); line-height: 1.04; margin-top: 0; }
+.spartak h1 .hero-title-line { color: white; }
+.spartak h1 .hero-title-outline { -webkit-text-stroke: 1.2px white; color: transparent; }
+.spartak .hero-description, .spartak .hero-bottom { color: #fff; }
+.spartak .hero-visual { min-height: 600px; }
+.spartak .hero-photo { object-position: 44% center; }
+.spartak .hero-photo-shade { background: linear-gradient(0deg, #271d20bd, transparent 45%); }
+.spartak .visual-bottomline > span { background: #271d20; }
+.spartak .button-primary { background: white; color: var(--accent); }
+.spartak .button-primary:hover { background: #f8e9ed; }
+.spartak .button-dark { background: var(--accent); color: white; }
+.spartak .button-dark:hover { background: var(--accent-hover); }
+.spartak .button, .spartak .icon-button { border-radius: 4px; }
+.spartak .coach-section, .spartak .schedule-section, .spartak .contacts-section { background: #fcf5f6; }
+.spartak .coach-photo-wrap { background: #f0e6e8; }
+.spartak .coach-license { background: var(--accent); color: white; }
+.spartak .coach-secondary { border-color: var(--line); }
+.spartak .coach-facts { border-color: var(--line); }
+.spartak .venue-main { aspect-ratio: 1.85; background: #eee7e9; border-radius: 4px; }
+.spartak .venue-main > img { object-fit: contain; background: #271d20; }
+.spartak .venue-main:has(.venue-photo-state) { background: #fcf5f6; }
+.spartak .venue-photo-state { color: var(--ink); background: white; }
+.spartak .venue-photo-state .button-primary { background: var(--accent); color: white; }
+.spartak .schedule-days { grid-template-columns: repeat(2, 1fr); }
+.spartak .schedule-tabs { grid-template-columns: repeat(2, 1fr); }
+.spartak .schedule-tabs strong { font-size: 24px; }
+.spartak .pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.spartak .price-card { border-color: var(--line); border-top: 4px solid var(--accent); border-radius: 4px; padding: 32px; }
+.spartak .price-card h3 { font-size: 24px; font-weight: 600; margin: 14px 0 25px; }
+.spartak .price-current { color: var(--accent); }
+.spartak .price-card ul { min-height: 110px; border-color: var(--line); }
+.spartak .single-session { border-color: var(--line); background: #fcf5f6; }
+.spartak .coach-details, .spartak .address-card { border-color: var(--line); }
+.spartak .button-outline, .spartak .gallery-controls button, .spartak .schedule-tabs button { border-color: #85777c; }
+.spartak .button-outline:hover { background: #f8e9ed; }
+.spartak .join-section { background: var(--accent); align-items: center; justify-content: space-between; border-radius: 4px; min-height: 360px; }
+.spartak .join-copy { padding: 44px; }
+.spartak .join-copy h2 { font-size: clamp(32px, 4.2vw, 58px); }
+.spartak .join-copy p, .spartak .join-copy .eyebrow { color: white; }
+.spartak .join-crest { width: 250px; height: 250px; object-fit: contain; margin-right: 60px; }
+.spartak .spartak-address > img { width: 100%; height: 240px; object-fit: cover; object-position: center 55%; }
+.spartak .contact-phone { font-size: clamp(22px, 2.6vw, 36px); }
+.spartak .contact-socials { margin-bottom: 16px; }
+.spartak .footer { background: #271d20; }
+.spartak .footer-invitation > span { color: #fff; }
+.spartak .footer-contacts > span { color: #ddd2d5; }
+.spartak .footer-middle > p, .spartak .footer-middle nav, .spartak .footer-bottom { color: #ddd2d5; }
+@media (max-width: 1050px) {
+  .spartak .hero-copy { padding: 32px 24px; }
+  .spartak .hero-copy::after { display: none; }
+  .spartak .hero-visual { min-height: 530px; }
+  .spartak .join-crest { width: 180px; height: 180px; margin-right: 32px; }
+}
+@media (max-width: 900px) {
+  .spartak .hero { grid-template-columns: 1fr; }
+  .spartak .hero-copy { padding: 36px; }
+  .spartak .hero-visual { min-height: 0; aspect-ratio: 4 / 3; }
+  .spartak .hero-photo { object-position: center; }
+  .spartak .join-copy { padding: 32px; }
+}
+@media (max-width: 640px) {
+  .spartak .section { padding-block: 48px; }
+  .spartak .brand-wordmark { font-size: 16px; }
+  .spartak .brand-second { font-size: 9px; }
+  .spartak .brand-caption { font-size: 5px !important; }
+  .spartak .hero-copy { padding: 28px 22px; }
+  .spartak h1 { font-size: clamp(43px, 10.5vw, 65px); }
+  .spartak .hero .eyebrow { font-size: 9px; margin-bottom: 20px; }
+  .spartak .hero-actions .button { white-space: normal; padding-inline: 16px; }
+  .spartak .hero-visual { aspect-ratio: 4 / 3; }
+  .spartak .visual-bottomline { left: 16px; bottom: 16px; }
+  .spartak .visual-bottomline > span:first-child { font-size: 11px; }
+  .spartak .pricing-grid { grid-template-columns: 1fr; }
+  .spartak .price-card { padding: 28px; }
+  .spartak .schedule-tabs strong { font-size: 19px; }
+  .spartak .schedule-days { grid-template-columns: 1fr; }
+  .spartak .venue-main { aspect-ratio: 3 / 4; }
+  .spartak .join-crest { display: none; }
+  .spartak .join-copy { padding: 28px 22px; }
+  .spartak .footer-invitation { font-size: 22px; }
+}

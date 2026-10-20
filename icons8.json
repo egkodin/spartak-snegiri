@@ -1,0 +1,92 @@
+{
+  "version": 2,
+  "icons": {
+    "pack": "m_outlined",
+    "sizes": [
+      16,
+      20,
+      24,
+      32
+    ],
+    "color": "currentColor",
+    "items": {
+      "left": {
+        "id": "85459",
+        "commonName": "left",
+        "preview": "https://img.icons8.com/?id=85459&format=png&size=48",
+        "file": "public/icons/left.png"
+      },
+      "right": {
+        "id": "85463",
+        "commonName": "right",
+        "preview": "https://img.icons8.com/?id=85463&format=png&size=48",
+        "file": "public/icons/right.png"
+      },
+      "up-right": {
+        "id": "99506",
+        "commonName": "up-right-arrow",
+        "preview": "https://img.icons8.com/?id=99506&format=png&size=48",
+        "file": "public/icons/up-right.png"
+      },
+      "check": {
+        "id": "82769",
+        "commonName": "checkmark",
+        "preview": "https://img.icons8.com/?id=82769&format=png&size=48",
+        "file": "public/icons/check.png"
+      },
+      "location": {
+        "id": "85049",
+        "commonName": "marker",
+        "preview": "https://img.icons8.com/?id=85049&format=png&size=48",
+        "file": "public/icons/location.png"
+      },
+      "menu": {
+        "id": "82749",
+        "commonName": "menu",
+        "preview": "https://img.icons8.com/?id=82749&format=png&size=48",
+        "file": "public/icons/menu.png"
+      },
+      "plus": {
+        "id": "96645",
+        "commonName": "plus-math",
+        "preview": "https://img.icons8.com/?id=96645&format=png&size=48",
+        "file": "public/icons/plus.png"
+      },
+      "close": {
+        "id": "82771",
+        "commonName": "delete-sign",
+        "preview": "https://img.icons8.com/?id=82771&format=png&size=48",
+        "file": "public/icons/close.png"
+      },
+      "football": {
+        "id": "86300",
+        "commonName": "football2",
+        "preview": "https://img.icons8.com/?id=86300&format=png&size=48",
+        "file": "public/icons/football.png"
+      },
+      "building": {
+        "id": "86622",
+        "commonName": "building",
+        "preview": "https://img.icons8.com/?id=86622&format=png&size=48",
+        "file": "public/icons/building.png"
+      },
+      "team": {
+        "id": "85057",
+        "commonName": "conference-call",
+        "preview": "https://img.icons8.com/?id=85057&format=png&size=48",
+        "file": "public/icons/team.png"
+      }
+    },
+    "format": "png",
+    "sourceSize": 96,
+    "license": {
+      "type": "free-with-attribution",
+      "url": "https://icons8.com/license",
+      "pngTerms": "https://intercom.help/icons8-7fb7577e8170/en/articles/4725518-can-i-download-icons-for-free"
+    }
+  },
+  "tokens": {
+    "iconColor": "--ink",
+    "accent": "--brand-green"
+  }
+}
