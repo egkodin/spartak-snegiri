@@ -22,7 +22,6 @@
 .spartak .hero .eyebrow { color: white; margin-bottom: 24px; font-size: 11px; }
 .spartak h1 { font-size: clamp(44px, 5.3vw, 76px); line-height: 1.04; margin-top: 0; }
 .spartak h1 .hero-title-line { color: white; }
-.spartak h1 .hero-title-outline { -webkit-text-stroke: 1.2px white; color: transparent; }
 .spartak .hero-description, .spartak .hero-bottom { color: #fff; }
 .spartak .hero-visual { min-height: 600px; }
 .spartak .hero-photo { object-position: 44% center; }

@@ -47,12 +47,12 @@ export default function SpartakApp() {
     <main id="main-content">
       <section className="hero container" aria-labelledby="hero-title">
         <div className="hero-copy"><span className="eyebrow">ДФК «Спартак» · Снегири</span>
-          <h1 id="hero-title"><span className="hero-title-line">Футбол.</span><span className="hero-title-line">Команда.</span><span className="hero-title-line hero-title-outline">Спартак.</span></h1>
+          <h1 id="hero-title"><span className="hero-title-line">Футбол.</span><span className="hero-title-line">Команда.</span><span className="hero-title-line">Спартак.</span></h1>
           <p className="hero-description">Футбол для детей в Снегирях.<br/>От первого паса до игры за свою команду.</p>
           <div className="hero-actions"><a className="button button-primary" href={enrollmentLink()} target="_blank" rel="noopener noreferrer">На бесплатную тренировку</a></div>
           <div className="hero-bottom"><Icon name="location" size={20}/><span>Снегири, ул. Стадионная, 3<br/><strong>Вторник и четверг · с 18:00</strong></span></div>
         </div>
-        <div className="hero-visual"><picture><source type="image/webp" srcSet={`${assetPath('images/spartak/hall-2-768.webp')} 768w, ${assetPath('images/spartak/hall-2-1600.webp')} 1600w`} sizes="(max-width: 900px) 100vw, 55vw"/><img className="hero-photo" src={assetPath('images/spartak/hall-2-upscaled.jpg')} alt="Дети играют в футбол с тренером в спортивном зале в Снегирях" width="2560" height="1920" fetchPriority="high"/></picture><div className="hero-photo-shade"/><div className="visual-bottomline"><span>СВОЯ КОМАНДА.<br/>КРАСНО-БЕЛЫЙ ХАРАКТЕР.</span></div></div>
+        <div className="hero-visual"><picture><source type="image/webp" srcSet={`${assetPath('images/spartak/hall-2-768.webp')} 768w, ${assetPath('images/spartak/hall-2-1600.webp')} 1600w`} sizes="(max-width: 900px) 100vw, 55vw"/><img className="hero-photo" src={assetPath('images/spartak/hall-2-upscaled.jpg')} alt="Дети играют в футбол с тренером в спортивном зале в Снегирях" width="2560" height="1920" fetchPriority="high"/></picture><div className="hero-photo-shade"/><div className="visual-bottomline"><span>СВОЯ КОМАНДА.</span></div></div>
       </section>
 
       <section className="about section container" id="about" aria-labelledby="about-title"><div className="section-label">О клубе</div>
