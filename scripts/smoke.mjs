@@ -19,8 +19,13 @@ try {
   await page.evaluate(() => document.fonts.ready);
   await page.evaluate(() => { document.documentElement.style.scrollBehavior = 'auto'; });
   assert.equal(await page.locator('h1').count(), 1);
-  assert.equal(await page.locator('#coaches .coach-layout').count(), 2);
+  assert.equal(await page.locator('#coaches .coach-layout').count(), 3);
   assert.equal(await page.locator('.coach-layout').last().locator('h2').innerText(), 'Валерий Валерьевич\nЦимбал');
+  assert.deepEqual(await page.locator('#coaches .coach-layout h2').allInnerTexts(), ['Максим Андреевич\nПолетаев', 'Артем Михайлович\nТрофимов', 'Валерий Валерьевич\nЦимбал']);
+  assert.equal(await page.locator('.coach-maxim .coach-license').innerText(), 'ЛИЦЕНЗИЯ C–UEFA');
+  assert((await page.locator('.coach-maxim .coach-facts').innerText()).includes('РГСУ'));
+  assert.deepEqual(await page.locator('.coach-achievements li').allInnerTexts(), ['Чемпион Москвы и МО', 'Чемпион международных соревнований в формате 7х7', 'Финалист всероссийского турнира Adidas', 'Чемпион кубка лфл Москва', 'Многократный обладатель индивидуальных наград']);
+
   assert.equal(await page.locator('.coach-methodist').count(), 0);
   assert.equal(await page.locator('.venue-thumbnails img').count(), 5);
   assert.equal(await page.locator('.price-card').count(), 2);
@@ -41,7 +46,7 @@ try {
   assert.equal(await page.locator('#curator-biography li').count(), 11);
   await context.route('https://t.me/**', route => route.fulfill({ contentType: 'text/html', body: 'Telegram preview' }));
   const popupPromise = context.waitForEvent('page');
-  await page.locator('#coaches .text-link').click();
+  await page.locator('#coaches .text-link').first().click();
   const popup = await popupPromise;
   await popup.waitForLoadState();
   assert.equal(new URL(popup.url()).pathname, '/cfcspartak');

@@ -34,6 +34,10 @@
 .spartak .button, .spartak .icon-button { border-radius: 4px; }
 .spartak .coach-section, .spartak .schedule-section, .spartak .contacts-section { background: #fcf5f6; }
 .spartak .coach-photo-wrap { background: #f0e6e8; }
+.spartak .coach-maxim .coach-photo-wrap { aspect-ratio: .85; }
+.spartak .coach-maxim .coach-photo-wrap img { object-position: center top; }
+.spartak .coach-maxim .coach-facts { grid-template-columns: 1fr; gap: 16px; }
+.spartak .coach-achievements { margin: 10px 0 24px; padding-left: 20px; color: var(--muted); font-size: 14px; line-height: 1.8; }
 .spartak .coach-license { background: var(--accent); color: white; }
 .spartak .coach-secondary { border-color: var(--line); }
 .spartak .coach-facts { border-color: var(--line); }
@@ -80,6 +84,7 @@
   .spartak .join-copy { padding: 32px; }
 }
 @media (max-width: 640px) {
+  .spartak #maxim-title { font-size: clamp(32px, 7.8vw, 46px); }
   .spartak .section { padding-block: 48px; }
   .spartak .brand-wordmark { font-size: 16px; }
   .spartak .brand-second { font-size: 9px; }

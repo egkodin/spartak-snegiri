@@ -11,9 +11,11 @@ assert(html.includes(`property="og:url" content="${url}"`));
 assert(html.includes(`property="og:image" content="${url}images/spartak/hall-2-1600.webp"`));
 assert(!/noindex|<div id="root"><\/div>/.test(html));
 assert(!/(?:src|href|srcSet)="\/(?:images|icons)\//.test(html), 'Resources must work under a GitHub Pages repository path');
-for (const text of ['Трофимов', 'Цимбал', 'Стадионная, 3', '18:00–19:00', '19:00–20:30', 'Вторник', 'Четверг', 'tel:+79067514267']) assert(html.includes(text), `Missing content: ${text}`);
+for (const text of ['Полетаев', 'РГСУ', 'Чемпион Москвы и МО', 'Чемпион международных соревнований в формате 7х7', 'Финалист всероссийского турнира Adidas', 'Чемпион кубка лфл Москва', 'Многократный обладатель индивидуальных наград', 'Трофимов', 'Цимбал', 'Стадионная, 3', '18:00–19:00', '19:00–20:30', 'Вторник', 'Четверг', 'tel:+79067514267']) assert(html.includes(text), `Missing content: ${text}`);
 for (const value of ['5180', '5900', '950']) assert(html.replaceAll(/\s/g, '').includes(value));
 assert.equal((html.match(/role="tabpanel"/g) || []).length, 2);
+assert(html.indexOf('id="maxim-title"') < html.indexOf('id="coach-title"'));
+assert(html.indexOf('id="coach-title"') < html.indexOf('id="curator-title"'));
 for (const match of html.matchAll(/(?:src|href)="([^"#]+)"/g)) {
   const ref = match[1];
   if (/^(https?:|tel:|mailto:)/.test(ref)) continue;

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { ArtemCoach, Collapse, CuratorCoach, Schedule, VenueGallery } from './components';
+import { ArtemCoach, Collapse, CuratorCoach, MaximCoach, Schedule, VenueGallery } from './components';
 import { assetPath } from './assetPath';
 import Icon from './icons';
 import { spartak, spartakFaqs, spartakGroups, spartakPlans, spartakVenues } from './content';
@@ -60,7 +60,7 @@ export default function SpartakApp() {
         <div className="values"><article><span className="value-icon"><Icon name="football" size={32}/></span><h3>Начать с удовольствием</h3><p>Базовые навыки и игровые упражнения. Можно прийти без опыта.</p></article><article><span className="value-icon"><Icon name="team" size={32}/></span><h3>Стать частью команды</h3><p>Турниры и возможность приглашения в сборную филиалов ДФК «Спартак».</p></article><article><span className="value-icon"><Icon name="building" size={32}/></span><h3>Тренироваться круглый год</h3><p>Зал, летнее поле, раздевалки и бесплатная парковка.</p></article></div>
       </section>
 
-      <section className="coach-section section" id="coaches" aria-labelledby="coaches-title"><div className="container"><h2 className="section-label coaches-title" id="coaches-title">Тренеры</h2><ArtemCoach onEnroll={() => { window.open(enrollmentLink(), '_blank', 'noopener,noreferrer'); }} clubName="ДФК Спартак"/><CuratorCoach/></div></section>
+      <section className="coach-section section" id="coaches" aria-labelledby="coaches-title"><div className="container"><h2 className="section-label coaches-title" id="coaches-title">Тренеры</h2><MaximCoach onEnroll={() => { window.open(enrollmentLink(), '_blank', 'noopener,noreferrer'); }}/><ArtemCoach onEnroll={() => { window.open(enrollmentLink(), '_blank', 'noopener,noreferrer'); }} clubName="ДФК Спартак"/><CuratorCoach/></div></section>
 
       <section className="venues-section section container" id="venues" aria-labelledby="venues-title"><div className="section-label">Наш зал</div><div className="section-heading"><h2 id="venues-title">Место, где<br/>начинается игра.</h2><p className="muted">Настоящие фотографии нашего зала.<br/>Снегири, ул. Стадионная, 3.</p></div><VenueGallery photos={spartakVenues} clubName="ДФК Спартак"/></section>
 
