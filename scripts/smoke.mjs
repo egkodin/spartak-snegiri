@@ -42,6 +42,11 @@ try {
   assert(!cta.searchParams.get('text').includes('СпортАкадемКлуб'));
   assert.equal(await page.locator('.contact-phone').getAttribute('href'), 'tel:+79067514267');
   assert.equal(await page.locator('#vk-pixel').count(), 0);
+  assert.equal(await page.locator('.address-info a').getAttribute('href'), 'https://yandex.ru/maps/org/snegirek/45210896054?si=0f63ev4bvvg42exe41krpzaru0');
+  for (const selector of ['.hero-bottom', '#venues .section-heading', '.address-info', '.footer-contacts']) {
+    const text = await page.locator(selector).innerText();
+    assert(text.includes('Снегирек') && text.includes('Октябрьская ул., 41, п. г. т. Снегири'));
+  }
   assert((await page.locator('#artem-career').textContent()).includes('2024: стажировка'));
   assert.equal(await page.locator('#curator-biography li').count(), 11);
   await context.route('https://t.me/**', route => route.fulfill({ contentType: 'text/html', body: 'Telegram preview' }));
@@ -107,7 +112,7 @@ try {
   assert.equal(await page.locator('.collapse').first().evaluate(el => getComputedStyle(el).transitionDuration), '0s');
   assert.deepEqual(errors, [], 'Browser and hydration errors');
   const html = readFileSync('dist/index.html', 'utf8');
-  assert(html.includes('Трофимов') && html.includes('Стадионная, 3') && html.replaceAll(/\s/g, '').includes('5180'));
+  assert(html.includes('Трофимов') && html.includes('Октябрьская ул., 41, п. г. т. Снегири') && html.replaceAll(/\s/g, '').includes('5180'));
   assert(!html.includes('<div id="root"></div>'));
   assert(!/(?:src|href|srcSet)="\/(?:images|icons)\//.test(html), 'SSR assets must support a subdirectory');
   assert(!html.includes('noindex'));
