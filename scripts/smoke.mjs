@@ -41,6 +41,9 @@ try {
   assert(cta.searchParams.get('text').includes('в ДФК «Спартак» в Снегирях'));
   assert(!cta.searchParams.get('text').includes('СпортАкадемКлуб'));
   assert.equal(await page.locator('.contact-phone').getAttribute('href'), 'tel:+79067514267');
+  const vkLinks = page.getByRole('link', { name: 'ВКонтакте', exact: true });
+  assert.equal(await vkLinks.count(), 2);
+  assert.deepEqual(await vkLinks.evaluateAll(links => links.map(link => link.href)), ['https://vk.ru/cfc_spartak', 'https://vk.ru/cfc_spartak']);
   assert.equal(await page.locator('#vk-pixel').count(), 0);
   assert.equal(await page.locator('.address-info a').getAttribute('href'), 'https://yandex.ru/maps/org/snegirek/45210896054?si=0f63ev4bvvg42exe41krpzaru0');
   for (const selector of ['.hero-bottom', '#venues .section-heading', '.address-info', '.footer-contacts']) {
